@@ -1,9 +1,9 @@
 
-rm(list=ls())
 
 require(data.table)
 require(ggplot2)
 
+# parameters
 n.grid <- 1000
 file <- "bar-implicit_deltaxE-3_deltatE-3"
 plot.title <- "implicit solution to heat equation\ndelta_x = 1E-3\ndelta_t = 1E-3"
@@ -53,6 +53,7 @@ for (i in 3:num.lines) {
 
 close(file.handle)
 
+# outputting the plot to a .png file
 png(paste(paste("/Users/sinahab/Dropbox/ubuntu_comp/",file,sep=""),".png",sep=""), width=1000, height=1000)
 
 ggplot(data=temperatures) + 
